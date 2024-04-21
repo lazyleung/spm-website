@@ -9,12 +9,12 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 30s linear;
   }
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #2E2F41;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,8 +24,23 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Tagline {
+  padding-top: 34px;
+}
+
+.Tagline p {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  margin: 0;
+}
+
+.Desc {
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
 @keyframes App-logo-spin {

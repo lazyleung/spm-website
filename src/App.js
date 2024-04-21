@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './spm-compass.svg';
 import './App.css';
 
 function App() {
@@ -6,17 +6,20 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <div className="Tagline">
+          <p>
+            Sic Parvis Magna
+          </p>
+          <p>
+            Greatness from small beginnings
+          </p>
+          <p>
+            - Sir Francis Drake
+          </p>
+        </div>
+        <p className="Desc">
+          Asia Esports Investment Specialist
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
   );
