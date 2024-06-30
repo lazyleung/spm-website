@@ -1,17 +1,38 @@
 #root {
-  max-width: 1280px;
+  width: 100vw;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
+header {
+  background-color: #a4c991;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+  padding: 1.5rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .logo {
-  height: 40vmin;
-  padding: 1.5em;
+  display: flex;
+  align-items: middle;
+}
+.logoText {
+  font-size: 3rem;
+  margin: 0;
+  padding-left: 0.5rem;
+}
+.logoIcon {
+  height: 3.5rem;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
+.logoIcon:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
@@ -25,20 +46,13 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .logo {
+  .logoIcon {
     animation: logo-spin infinite 40s linear;
   }
 }
 
-.card {
-  padding: 2em;
-}
-
-.Tagline {
-  padding-top: 34px;
-}
-
 .Tagline p {
+  font-size: 3rem;
   font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
@@ -47,6 +61,7 @@
 }
 
 .Desc {
+  font-size: 1.5rem;
   font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
