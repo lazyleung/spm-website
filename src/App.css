@@ -1,3 +1,23 @@
+@font-face {
+  font-family: aspire;
+  src: url(AspireDemibold-YaaO.ttf);
+}
+
+@font-face {
+  font-family: roboto-light;
+  src: url(Roboto-Light.ttf);
+}
+
+@font-face {
+  font-family: roboto-med;
+  src: url(Roboto-Medium.ttf);
+}
+
+@font-face {
+  font-family: roboto;
+  src: url(Roboto-Regular.ttf);
+}
+
 #root {
   width: 100vw;
   height: 100vh;
@@ -5,13 +25,22 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start;
-  align-items: stretch; */
 }
 
-header {
-  background-color: #a4c991;
-  color: white;
+.hero {
+  background-color: #000000;
+  background-image: url('white-paper-texture.jpg');
+  width: 100%;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header {
+  background-color: transparent;
+  color: #A8201A;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,45 +83,48 @@ header {
   }
 }
 
-.hero {
-  background-color: #000000;
-  background-image: url('white-paper-texture.jpg');
-  width: 100%;
-  height: 30rem;
+.herotext {
+  flex-grow: 1;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
 
-.hero h1 {
-  font-size: 3rem;
-  font-family: "Sora", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
   margin: 0;
   color:black;
 }
 
-.hero h2 {
-  font-size: 3rem;
-  font-family: "Sora", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
+.herotext h1 {
+  font-family: aspire;
+  font-size: 5.5rem;
   margin: 0;
-  color:black;
+}
+
+.herotext h2 {
+  font-family: aspire;
+  font-size: 2.25rem;
+  margin: 0;
 }
 
 .info {
   height: 10rem;
 }
 
-.info p {
-  font-size: 1.5rem;
-  font-family: "Sora", sans-serif;
+.info h1 {
+  font-size: 2.25rem;
+
+  font-family: roboto;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
+}
+
+.info p {
+  font-size: 1.5rem;
+  font-family: roboto-light;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+
+  margin: 0 15vw;
 }
