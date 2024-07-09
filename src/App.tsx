@@ -3,7 +3,7 @@ import spmLogo from '/spm-compass.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [] = useState(0)
 
   return (
     <>
@@ -15,25 +15,26 @@ function App() {
           </h1>
         </div>
         
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => console.log("click")}>
           Client Login
         </button>
       </header>
       <main>
-        <div className="Tagline">
-          <p>
+        <div className="hero">
+          <h1>
             Sic Parvis Magna
-          </p>
-          <p>
+          </h1>
+          <h2>
             Greatness from small beginnings
-          </p>
-          <p>
             - Sir Francis Drake
-          </p>
+          </h2>
         </div>
-        <p className="Desc">
-            Asia Esports Investment Specialist
-        </p>
+        <div className="info">
+            <p>
+              Asia Esports Investment Specialist
+            </p>
+            {/* Contact Info */}
+        </div>
       </main>
     </>
   )

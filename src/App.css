@@ -1,7 +1,12 @@
 #root {
   width: 100vw;
+  height: 100vh;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-start;
+  align-items: stretch; */
 }
 
 header {
@@ -12,8 +17,6 @@ header {
   align-items: center;
   height: 5rem;
   padding: 1.5rem;
-  position: fixed;
-  top: 0;
   width: 100%;
   box-sizing: border-box;
 }
@@ -51,16 +54,42 @@ header {
   }
 }
 
-.Tagline p {
+.hero {
+  background-color: #000000;
+  background-image: url('white-paper-texture.jpg');
+  width: 100%;
+  height: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
   font-size: 3rem;
   font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
   margin: 0;
+  color:black;
 }
 
-.Desc {
+.hero h2 {
+  font-size: 3rem;
+  font-family: "Sora", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  margin: 0;
+  color:black;
+}
+
+.info {
+  height: 10rem;
+}
+
+.info p {
   font-size: 1.5rem;
   font-family: "Sora", sans-serif;
   font-optical-sizing: auto;
