@@ -1,11 +1,26 @@
 import { useState } from 'react'
+import { useAuth0 } from "@auth0/auth0-react";
 import spmLogo from '/spm-compass.svg'
 import './App.css'
 
 function App() {
   const latinMoto = 'Sic Pravis Magna';
   const engMoto = 'Greatness from small beginnings';
-  const [mottoText, setText] = useState(latinMoto);
+  const [mottoText, setMottoText] = useState(latinMoto);
+  // const [isLogin, setIsLogin] = useState(useAuth0());
+
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0();
+
+  async function auth() {
+    let operation;
+    if (isAuthenticated) {
+      operation = logout({logoutParams: { returnTo: window.location.origin }})
+    } else {
+      operation = loginWithRedirect()
+    }
+    let status = await operation
+    console.log(status)
+  }
 
   return (
     <>
@@ -18,14 +33,14 @@ function App() {
                 SPM Capital
               </h1> */}
             </div>
-            <button onClick={() => console.log('click')}>
-              Client Login
+            <button onClick={() => auth()}>
+              { isAuthenticated ? 'Logout': 'Client Login' }
             </button>
           </div>
           <div className='herotext'>
             <h1
-              onMouseEnter={() => setText(engMoto)}
-              onMouseLeave={() => setText(latinMoto)}>
+              onMouseEnter={() => setMottoText(engMoto)}
+              onMouseLeave={() => setMottoText(latinMoto)}>
               {mottoText}
             </h1>
             <h2>
